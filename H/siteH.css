@@ -1,0 +1,295 @@
+* {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  
+}
+
+.logo {
+  width: 3.8rem; 
+  margin-left: 2rem;
+}
+
+.menu{
+  display: flex;
+  margin-top: 1rem;
+  background-color: rgb(255, 255, 255) ;
+  border-bottom: 3px solid rgb(221, 221, 221);
+  border-radius: 10px;
+}
+
+nav.cabeça{
+  display: flex;
+  margin-left: 32vh;
+  padding: 1vh;
+}
+
+a.dd{
+  color: black;
+  text-decoration: none;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  font-weight: normal;  
+  font-size: 1.2rem;
+  margin: 4vh;
+  margin-top: 1.5rem;
+}
+
+.conteúdo{
+  margin-top: 5vh;
+}
+
+h1{
+  text-align: center;
+  margin-top: 15vh;
+  width: 100vh;
+  text-align: center;
+  margin-left: 52vh;
+  color: rgb(116, 116, 116);
+  font-size: 40px;
+}
+
+.exibição{
+  display: flex;
+  align-items: center;
+  margin-top: 22vh;
+}
+
+.exibição div{
+  display: flex;
+  border: 2px solid color rgb(224, 224, 224);
+  padding: 30vh;
+  margin: 2vh;
+  margin-left: 30px;
+  border-radius: 10px;
+  background-color: rgb(224, 224, 224);
+}
+
+
+
+
+
+
+
+/*BARRA DE PESQUISA*/
+
+.buscar-box{
+  width: 60px;
+  height: 60px;
+  margin-top: 0.7rem;
+  border-radius: 2.5rem;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  transition: 1s;
+  left: 20px;
+  box-shadow: 0 4px 24px hsla(222, 68%, 12%, .1);
+}
+
+.buscar-box:hover{
+  transform: scale(1.05);
+  transition: .8s;
+}
+
+.buscar-box.ativar{
+   width: 350px;
+}
+
+.buscar-box .lupa-buscar, .buscar-box .btn-fechar{
+  min-width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; 
+  right: 5rem; 
+}
+
+.buscar-box .btn-fechar{
+   font-size: 20px;
+   margin-right: -10px;
+}
+
+.buscar-box .lupa-buscar i{
+   font-size: 30px;
+  
+}
+
+.buscar-box .imput-buscar{
+   position: absolute;
+   left: 60px;
+   width: calc(100% - 120px);
+   height: 100%;
+   line-height: 65px;
+}
+
+.buscar-box .imput-buscar input{
+  border: 0;
+  outline: 0;
+  font-size: 20px;
+}
+
+
+
+
+/*Slide*/
+
+section.slider{
+  margin: 0 auto;
+  width: 95%;
+  height: auto;
+  padding: 0 !important;
+  overflow: hidden;
+  margin-top: 8rem;
+  border-radius: 25px;
+  box-shadow: 0 4px 24px hsla(222, 68%, 12%, .1);
+}
+
+.slider-content{
+    width: 400%;
+    height: auto;
+    display: flex;
+   
+}
+
+.slider-content input, .img-mobile{
+    display: none;
+}
+
+.slide-box{
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 2s;
+    box-shadow: 0 4px 24px hsla(222, 68%, 12%, .1);
+}
+
+.slide-box img{
+    width: 100%;
+}
+
+.nav-manual, .nav-auto{
+    position: absolute;
+    width: 95%;
+    margin-top: 32%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-manual .manual-btn, .nav-auto div{
+    border: 1px solid rgb(211, 211, 211);
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child){
+    margin-right: 10px;
+}
+
+.nav-manual .manual-btn:hover{
+    background-color: rgb(211, 211, 211);
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1, #radio2:checked ~ .nav-auto .auto-btn2, #radio3:checked ~ .nav-auto .auto-btn3 {
+    background-color: rgb(211, 211, 211);
+}
+
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .primeiro{
+    margin-left: -50%;
+}
+
+@media screen and (max-width: 900px) {
+    .img-desktop{
+        display: none;
+    }
+
+    .img-mobile{
+        display: block;
+    }
+
+    .nav-auto , .nav-manual{
+        margin-top: 5%;
+     }
+}
+
+
+
+/*DEMONSTRAÇÕES*/
+
+.demo1 h1{
+  font-size: 40px;
+ }
+ 
+ .modelos-content{
+   display: flex;
+   ;
+ }
+ 
+ .fotos{
+   border-radius: 50px;
+   width: 20rem;
+   margin: 50px;
+   margin-right: 4.5rem;
+ }
+ 
+ .fotos:hover{
+   transform: scale(1.05);
+   cursor: pointer;
+   }
+
+   .modelos-content p{
+    margin-top: -46px;
+    padding-left: 5rem;
+    font-size: 25px;
+    color: rgb(116, 116, 116);
+    margin-right: 80px;
+    margin-left: 80px;
+  }
+
+  .acessórios .frase{
+    margin-top: 10rem;
+    margin-left: 1rem;
+  }
+
+  .imagem-ac2 {
+    display: flex;
+    
+  }
+
+  .imagem-ac2 img{
+    width: 23rem;
+    margin-left: 3.2rem;
+   
+  }
+
+  .ac img:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+    
+  .modelos-content .fotos div,img{
+    transition: transform .3s ease;
+  }
+
+
+  
+
+  
